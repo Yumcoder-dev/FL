@@ -1,0 +1,137 @@
+2024-11-05 15:30:11,270 - SimulatorRunner - INFO - Create the Simulator Server.
+2024-11-05 15:30:11,271 - CoreCell - INFO - server: creating listener on tcp://0:50116
+2024-11-05 15:30:11,327 - CoreCell - INFO - server: created backbone external listener for tcp://0:50116
+2024-11-05 15:30:11,327 - ConnectorManager - INFO - 43239: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2024-11-05 15:30:11,328 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:51363] is starting
+2024-11-05 15:30:11,831 - CoreCell - INFO - server: created backbone internal listener for tcp://localhost:51363
+2024-11-05 15:30:11,832 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 PASSIVE tcp://0:50116] is starting
+2024-11-05 15:30:11,907 - nvflare.fuel.hci.server.hci - INFO - Starting Admin Server localhost on Port 50117
+2024-11-05 15:30:11,907 - SimulatorRunner - INFO - Deploy the Apps.
+2024-11-05 15:30:11,915 - SimulatorRunner - INFO - Create the simulate clients.
+2024-11-05 15:30:11,918 - ClientManager - INFO - Client: New client site-1@100.67.94.87 joined. Sent token: 3c56a47c-beca-481a-9eb8-23898e920613.  Total clients: 1
+2024-11-05 15:30:11,918 - FederatedClient - INFO - Successfully registered client:site-1 for project simulator_server. Token:3c56a47c-beca-481a-9eb8-23898e920613 SSID:
+2024-11-05 15:30:11,919 - ClientManager - INFO - Client: New client site-2@100.67.94.87 joined. Sent token: 3f9d2093-8a55-4ad4-983d-a98203172614.  Total clients: 2
+2024-11-05 15:30:11,919 - FederatedClient - INFO - Successfully registered client:site-2 for project simulator_server. Token:3f9d2093-8a55-4ad4-983d-a98203172614 SSID:
+2024-11-05 15:30:11,919 - SimulatorRunner - INFO - Set the client status ready.
+2024-11-05 15:30:11,919 - SimulatorRunner - INFO - Deploy and start the Server App.
+2024-11-05 15:30:11,920 - Cell - INFO - Register blob CB for channel='server_command', topic='*'
+2024-11-05 15:30:11,920 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
+2024-11-05 15:30:11,920 - ServerCommandAgent - INFO - ServerCommandAgent cell register_request_cb: server.simulate_job
+2024-11-05 15:30:11,925 - IntimeModelSelector - INFO - model selection weights control: {}
+2024-11-05 15:30:11,925 - AuxRunner - INFO - registered aux handler for topic __sync_runner__
+2024-11-05 15:30:11,925 - AuxRunner - INFO - registered aux handler for topic __job_heartbeat__
+2024-11-05 15:30:11,925 - AuxRunner - INFO - registered aux handler for topic __task_check__
+2024-11-05 15:30:11,925 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
+2024-11-05 15:30:11,925 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
+2024-11-05 15:30:11,925 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
+2024-11-05 15:30:11,926 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job]: Server runner starting ...
+2024-11-05 15:30:11,926 - AuxRunner - INFO - registered aux handler for topic fed.event
+2024-11-05 15:30:11,926 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job]: starting workflow controller (<class 'nvflare.app_common.workflows.fedavg.FedAvg'>) ...
+2024-11-05 15:30:11,926 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Initializing BaseModelController workflow.
+2024-11-05 15:30:11,926 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Workflow controller (<class 'nvflare.app_common.workflows.fedavg.FedAvg'>) started
+2024-11-05 15:30:11,926 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Beginning model controller run.
+2024-11-05 15:30:11,926 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Start FedAvg.
+2024-11-05 15:30:11,926 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: loading initial model from persistor
+2024-11-05 15:30:11,926 - NPModelPersistor - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Unable to load model from /Users/yumcoder/Desktop/FL/h-fedavg-numpy/workdir/server/simulate_job/models/server.npy: FileNotFoundError: [Errno 2] No such file or directory: '/Users/yumcoder/Desktop/FL/h-fedavg-numpy/workdir/server/simulate_job/models/server.npy'. Using default data instead.
+2024-11-05 15:30:11,927 - NPModelPersistor - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Loaded initial model: {'numpy_key': array([[1., 2., 3.],
+       [4., 5., 6.],
+       [7., 8., 9.]], dtype=float32)}
+2024-11-05 15:30:11,927 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Round 0 started.
+2024-11-05 15:30:11,927 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Sampled clients: ['site-1', 'site-2']
+2024-11-05 15:30:11,927 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Sending task train to ['site-1', 'site-2']
+2024-11-05 15:30:11,927 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: scheduled task train
+2024-11-05 15:30:12,922 - SimulatorClientRunner - INFO - Start the clients run simulation.
+2024-11-05 15:30:13,927 - SimulatorClientRunner - INFO - Simulate Run client: site-1 on GPU group: 0
+2024-11-05 15:30:13,928 - SimulatorClientRunner - INFO - Simulate Run client: site-2 on GPU group: 0
+2024-11-05 15:30:15,018 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00005 127.0.0.1:50116 <= 127.0.0.1:50138] is created: PID: 43239
+2024-11-05 15:30:15,018 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00006 127.0.0.1:50116 <= 127.0.0.1:50137] is created: PID: 43239
+2024-11-05 15:30:15,650 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: assigned task to client site-2: name=train, id=fb440bae-dcf6-4506-8507-8cdfffe2aa84
+2024-11-05 15:30:15,651 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: sent task assignment to client. client_name:site-2 task_id:fb440bae-dcf6-4506-8507-8cdfffe2aa84
+2024-11-05 15:30:15,651 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, task_name=train, task_id=e4744281-e5fb-4fe9-a2d6-fdde24e34c0d]: assigned task to client site-1: name=train, id=e4744281-e5fb-4fe9-a2d6-fdde24e34c0d
+2024-11-05 15:30:15,651 - GetTaskCommand - INFO - return task to client.  client_name: site-2  task_name: train   task_id: fb440bae-dcf6-4506-8507-8cdfffe2aa84  sharable_header_task_id: fb440bae-dcf6-4506-8507-8cdfffe2aa84
+2024-11-05 15:30:15,652 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, task_name=train, task_id=e4744281-e5fb-4fe9-a2d6-fdde24e34c0d]: sent task assignment to client. client_name:site-1 task_id:e4744281-e5fb-4fe9-a2d6-fdde24e34c0d
+2024-11-05 15:30:15,652 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: e4744281-e5fb-4fe9-a2d6-fdde24e34c0d  sharable_header_task_id: e4744281-e5fb-4fe9-a2d6-fdde24e34c0d
+2024-11-05 15:30:16,172 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=e4744281-e5fb-4fe9-a2d6-fdde24e34c0d
+2024-11-05 15:30:16,195 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=e4744281-e5fb-4fe9-a2d6-fdde24e34c0d]: finished processing client result by controller
+2024-11-05 15:30:16,196 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job]: got result from client site-2 for task: name=train, id=fb440bae-dcf6-4506-8507-8cdfffe2aa84
+2024-11-05 15:30:16,196 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:e4744281-e5fb-4fe9-a2d6-fdde24e34c0d
+2024-11-05 15:30:16,211 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: finished processing client result by controller
+2024-11-05 15:30:16,211 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: task train exit with status TaskCompletionStatus.OK
+2024-11-05 15:30:16,211 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-2   task_id:fb440bae-dcf6-4506-8507-8cdfffe2aa84
+2024-11-05 15:30:16,212 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: aggregating 2 update(s) at round 0
+2024-11-05 15:30:16,213 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: Start persist model on server.
+2024-11-05 15:30:16,213 - NPModelPersistor - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: Saved numpy model to: /Users/yumcoder/Desktop/FL/h-fedavg-numpy/workdir/server/simulate_job/models/server.npy
+2024-11-05 15:30:16,214 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: End persist model on server.
+2024-11-05 15:30:16,214 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: Round 1 started.
+2024-11-05 15:30:16,214 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: Sampled clients: ['site-1', 'site-2']
+2024-11-05 15:30:16,214 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: Sending task train to ['site-1', 'site-2']
+2024-11-05 15:30:16,214 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fb440bae-dcf6-4506-8507-8cdfffe2aa84]: scheduled task train
+2024-11-05 15:30:18,224 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: assigned task to client site-2: name=train, id=ee5375b3-b71c-42de-bd99-791b663b2fe5
+2024-11-05 15:30:18,225 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, task_name=train, task_id=2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f]: assigned task to client site-1: name=train, id=2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f
+2024-11-05 15:30:18,225 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: sent task assignment to client. client_name:site-2 task_id:ee5375b3-b71c-42de-bd99-791b663b2fe5
+2024-11-05 15:30:18,226 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, task_name=train, task_id=2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f]: sent task assignment to client. client_name:site-1 task_id:2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f
+2024-11-05 15:30:18,226 - GetTaskCommand - INFO - return task to client.  client_name: site-2  task_name: train   task_id: ee5375b3-b71c-42de-bd99-791b663b2fe5  sharable_header_task_id: ee5375b3-b71c-42de-bd99-791b663b2fe5
+2024-11-05 15:30:18,227 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f  sharable_header_task_id: 2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f
+2024-11-05 15:30:18,740 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f
+2024-11-05 15:30:18,741 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f]: validation metric 6.0 from client site-1
+2024-11-05 15:30:18,741 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job]: got result from client site-2 for task: name=train, id=ee5375b3-b71c-42de-bd99-791b663b2fe5
+2024-11-05 15:30:18,750 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f]: finished processing client result by controller
+2024-11-05 15:30:18,750 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:2d98d6b1-7f6a-4596-a9c0-e59b5dc47c4f
+2024-11-05 15:30:18,751 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: validation metric 6.0 from client site-2
+2024-11-05 15:30:18,760 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: finished processing client result by controller
+2024-11-05 15:30:18,760 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-2   task_id:ee5375b3-b71c-42de-bd99-791b663b2fe5
+2024-11-05 15:30:18,863 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: task train exit with status TaskCompletionStatus.OK
+2024-11-05 15:30:18,864 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: new best validation metric at round 1: 6.0
+2024-11-05 15:30:18,864 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: aggregating 2 update(s) at round 1
+2024-11-05 15:30:18,865 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: Start persist model on server.
+2024-11-05 15:30:18,865 - NPModelPersistor - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: Saved numpy model to: /Users/yumcoder/Desktop/FL/h-fedavg-numpy/workdir/server/simulate_job/models/server.npy
+2024-11-05 15:30:18,865 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: End persist model on server.
+2024-11-05 15:30:18,865 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: Round 2 started.
+2024-11-05 15:30:18,865 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: Sampled clients: ['site-1', 'site-2']
+2024-11-05 15:30:18,866 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: Sending task train to ['site-1', 'site-2']
+2024-11-05 15:30:18,866 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ee5375b3-b71c-42de-bd99-791b663b2fe5]: scheduled task train
+2024-11-05 15:30:20,769 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: assigned task to client site-1: name=train, id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980
+2024-11-05 15:30:20,770 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: sent task assignment to client. client_name:site-1 task_id:0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980
+2024-11-05 15:30:20,770 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, task_name=train, task_id=8a32cd28-b298-48ba-bf9d-a91af625f254]: assigned task to client site-2: name=train, id=8a32cd28-b298-48ba-bf9d-a91af625f254
+2024-11-05 15:30:20,770 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980  sharable_header_task_id: 0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980
+2024-11-05 15:30:20,771 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, task_name=train, task_id=8a32cd28-b298-48ba-bf9d-a91af625f254]: sent task assignment to client. client_name:site-2 task_id:8a32cd28-b298-48ba-bf9d-a91af625f254
+2024-11-05 15:30:20,772 - GetTaskCommand - INFO - return task to client.  client_name: site-2  task_name: train   task_id: 8a32cd28-b298-48ba-bf9d-a91af625f254  sharable_header_task_id: 8a32cd28-b298-48ba-bf9d-a91af625f254
+2024-11-05 15:30:21,493 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job]: got result from client site-2 for task: name=train, id=8a32cd28-b298-48ba-bf9d-a91af625f254
+2024-11-05 15:30:21,493 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=8a32cd28-b298-48ba-bf9d-a91af625f254]: validation metric 7.0 from client site-2
+2024-11-05 15:30:21,564 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=8a32cd28-b298-48ba-bf9d-a91af625f254]: finished processing client result by controller
+2024-11-05 15:30:21,565 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-2   task_id:8a32cd28-b298-48ba-bf9d-a91af625f254
+2024-11-05 15:30:21,861 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980
+2024-11-05 15:30:21,862 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: validation metric 7.0 from client site-1
+2024-11-05 15:30:21,874 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: finished processing client result by controller
+2024-11-05 15:30:21,875 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980
+2024-11-05 15:30:21,970 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: task train exit with status TaskCompletionStatus.OK
+2024-11-05 15:30:21,980 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: new best validation metric at round 2: 7.0
+2024-11-05 15:30:21,981 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: aggregating 2 update(s) at round 2
+2024-11-05 15:30:21,983 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: Start persist model on server.
+2024-11-05 15:30:21,992 - NPModelPersistor - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: Saved numpy model to: /Users/yumcoder/Desktop/FL/h-fedavg-numpy/workdir/server/simulate_job/models/server.npy
+2024-11-05 15:30:21,994 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: End persist model on server.
+2024-11-05 15:30:21,995 - FedAvg - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=0cc6ec05-1be5-4cbb-b4ef-beadcdcdf980]: Finished FedAvg.
+2024-11-05 15:30:21,996 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Workflow: controller finalizing ...
+2024-11-05 15:30:21,996 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: ABOUT_TO_END_RUN fired
+2024-11-05 15:30:22,007 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Firing CHECK_END_RUN_READINESS ...
+2024-11-05 15:30:22,043 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: END_RUN fired
+2024-11-05 15:30:22,044 - ReliableMessage - INFO - ReliableMessage is shutdown
+2024-11-05 15:30:22,044 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: Server runner finished.
+2024-11-05 15:30:23,575 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-2, peer_run=simulate_job]: server runner is finalizing - asked client to end the run
+2024-11-05 15:30:23,576 - GetTaskCommand - INFO - return task to client.  client_name: site-2  task_name: __end_run__   task_id:   sharable_header_task_id: 
+2024-11-05 15:30:23,882 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller, peer=site-1, peer_run=simulate_job]: server runner is finalizing - asked client to end the run
+2024-11-05 15:30:23,883 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: __end_run__   task_id:   sharable_header_task_id: 
+2024-11-05 15:30:23,925 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00005 Not Connected] is closed PID: 43239
+2024-11-05 15:30:23,940 - SimulatorServer - INFO - Server app stopped.
+
+
+2024-11-05 15:30:23,953 - ReliableMessage - INFO - shutdown reliable message monitor
+2024-11-05 15:30:23,994 - FederatedClient - INFO - Shutting down client run: site-1
+2024-11-05 15:30:23,994 - FederatedClient - INFO - Shutting down client run: site-2
+2024-11-05 15:30:23,994 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=controller]: asked to abort - triggered abort_signal to stop the RUN
+2024-11-05 15:30:23,995 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00006 Not Connected] is closed PID: 43239
+2024-11-05 15:30:24,430 - nvflare.fuel.hci.server.hci - INFO - Admin Server localhost on Port 50117 shutdown!
+2024-11-05 15:30:24,430 - SimulatorServer - INFO - shutting down server
+2024-11-05 15:30:24,431 - SimulatorServer - INFO - canceling sync locks
+2024-11-05 15:30:24,431 - SimulatorServer - INFO - server off
+2024-11-05 15:30:27,874 - MPM - INFO - MPM: Good Bye!
