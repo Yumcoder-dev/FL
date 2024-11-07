@@ -29,7 +29,7 @@ Key aspects of FL in medical imaging:
    - Follow the NVIDIA FLARE [installation guide](https://github.com/NVIDIA/NVFlare) to set up the environment.
 
 2. **Define the Job Configuration**:
-   - The `fedavg_script_runner_hello_numpy.py` script (see screenshot) provides a base example of defining the FL job with FedAvg aggregation.
+here - The `fedavg_script_runner_hello_numpy.py` script provides a base example of defining the FL job with FedAvg aggregation.
    - Update the script to configure parameters for your specific data and model:
      - `n_clients`: Number of clients participating.
      - `num_rounds`: Number of training rounds.
